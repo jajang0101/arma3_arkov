@@ -1,0 +1,65 @@
+﻿author = "아르마 마이너 갤러리"; // Author
+onLoadMission = "디시인사이드 아르마 마이너갤러리 서버"; // Description
+//loadScreen = ""; // Preview picture
+overviewText = "";
+//overviewPicture = "pics\overview.paa";
+class Header
+{
+  gameType = Escape;
+  minPlayers = 1;
+  maxPlayers = 20;
+};
+
+enableDebugConsole = 1;
+
+class Params
+{
+	//#define WEATHER_DEFAULT  25 
+	//#include "\a3\functions_f\Params\paramWeather.hpp"
+	//#include "ghst_params.hpp"
+
+};
+
+/*
+RespawnDialog = 0;
+*/
+class CfgRespawnTemplates
+{
+	
+};
+
+respawn = "BASE";
+respawnDelay = 5;
+respawnTemplates[] = {"MenuPosition"};//,"menuInventory"
+respawnOnStart = -1;
+disabledAI = 1;
+
+class cfgFunctions {
+	#include "functions\cfgfunctions.hpp"
+};
+
+#include "ui\defines.hpp"
+#include "ui\menu.hpp"
+
+//Debrief
+class CfgDebriefing
+{  
+	class End1
+	{
+		title = "Mission Completed";
+		subtitle = "";
+		description = "Good Job Ladies! You made it out alive!";
+		pictureBackground = "";
+		picture = "b_inf";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	class Fail
+	{
+		title = "Mission Failed";
+		subtitle = "";
+		description = "You all died";
+		pictureBackground = "";
+		picture = "b_inf";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+};
